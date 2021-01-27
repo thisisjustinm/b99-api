@@ -9,14 +9,15 @@
     This service provides quotes from the beloved characters of Brooklyn Nine-Nine. This is an unofficial API created for fun.
     <br>
 </p>
-<h3>Available characters</h3>
+<h3><u>Available characters</u></h3>
 <ul>
 {% for char in char_list %}
   <li>{{char.title()}}</li>
 {% endfor %}
 </ul>
 Other characters will be added later.
-<h3>How to use</h3>
+Quotes are available only for the first 2 seasons now.
+<h3><u>How to use</u></h3>
 <ol>
     <li><b>/name/:name</b> - Use name from the above list to get a random quote from any season. e.g <a href="/name/holt">/name/holt</a></li>
     <li><b>/name/:name?season=:season</b> - Similar as above but with given season. e.g <a href="/name/holt?season=1">/name/holt?season=1</a></li>
@@ -24,9 +25,8 @@ Other characters will be added later.
     <li><b>/season/:season?name=:name</b> - Similar as above but with given name. e.g <a href="/season/1?name=holt">/season/1?name=holt</a></li>
     <li><b>/title/</b> - Returns a random TITLE OF A SEX TAPE. Link: <a href="/title">/title</a></li>
 </ol>
-2 and 4 are essentially the same.
 
-<h3>Disclaimer</h3>
+<h3><u>Disclaimer</u></h3>
 I hereby declare that I do not own the rights to Brooklyn Nine-Nine or anything related. All rights belong to the owners(Fox BC and NBC). <br> Please note that the quotes are NOT used for monetary purposes in any way, shape, or form to my knowledge and copyright infringement is NOT intended.
 <br><br>Copyleft (ɔ) 2021 Justin M.
 </body>
