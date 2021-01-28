@@ -4,7 +4,7 @@
 	<title>Quotes API for Brooklyn Nine-Nine</title>
 </head>
 <body>
-<h2>Quotes API for Brooklyn Nine-Nine</h2>
+<h2>Quotes API for 🅱9️⃣9️⃣</h2>
 <p>
     This service provides quotes from the beloved characters of Brooklyn Nine-Nine. This is an unofficial API created for fun.
     <br>
@@ -15,19 +15,23 @@
   <li>{{char.title()}}</li>
 {% endfor %}
 </ul>
-Other characters will be added later.
-Quotes are available only for the first 2 seasons now.
+Other characters will be added later.<br>
+Quotes are available only for the first 2 seasons now. (So you might see 'Quotes for this season not available yet.')
 <h3><u>How to use</u></h3>
 <ol>
-    <li><b>/name/:name</b> - Use name from the above list to get a random quote from any season. e.g <a href="/name/holt">/name/holt</a></li>
-    <li><b>/name/:name?season=:season</b> - Similar as above but with given season. e.g <a href="/name/holt?season=1">/name/holt?season=1</a></li>
-    <li><b>/season/:season</b> - Get a random quote from any character for the given season. e.g <a href="/season/1">/season/1</a></li>
-    <li><b>/season/:season?name=:name</b> - Similar as above but with given name. e.g <a href="/season/1?name=holt">/season/1?name=holt</a></li>
-    <li><b>/title/</b> - Returns a random TITLE OF A SEX TAPE. Link: <a href="/title">/title</a></li>
+    <li><b>/name/:name</b> - Use name from the above list to get a random quote from any season. Try: <a href="/name/holt">/name/holt</a></li>
+    <li><b>/name/:name?season=:season</b> - Similar as above but with given season. Try: <a href="/name/diaz?season=1">/name/diaz?season=1</a></li>
+    <li><b>/season/:season</b> - Get a random quote from any character for the given season. Try: <a href="/season/1">/season/1</a></li>
+    <li><b>/season/:season?name=:name</b> - Similar as above but with given name. Try: <a href="/season/1?name=santiago">/season/1?name=peralta</a></li>
+    <li><b>/title/</b> - Returns a random TITLE OF A SEX TAPE. Try: <a href="/title">/title</a></li>
+    <li><b>/title?name=:name</b> - Returns a random TITLE OF A SEX TAPE. But with given name. Try: <a href="/title?name=santiago">/title?name=santiago</a></li>
+    <li><b>/insults/:name</b> - Returns a random insult by Holt/Wuntch, but the name replaced with a given name. Try: <a href="/insults/boyle">/insults/boyle</a></li>
 </ol>
 
 <h3><u>Disclaimer</u></h3>
 I hereby declare that I do not own the rights to Brooklyn Nine-Nine or anything related. All rights belong to the owners(Fox BC and NBC). <br> Please note that the quotes are NOT used for monetary purposes in any way, shape, or form to my knowledge and copyright infringement is NOT intended.
+<br>If you have any concerns, please create an
+:issue <a href="https://github.com/thisisjustinm/b99-api/issues">here</a>.
 <br><br>Copyleft (ɔ) 2021 Justin M.
 </body>
 </html>

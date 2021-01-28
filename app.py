@@ -52,10 +52,23 @@ def get_season(season):
         return quote_list[randint(0, len(quote_list) - 1)]
 
 
-@app.route('/title/')
+@app.route('/title')
 def get_title():
     quote_list = read_txt('toyst', 'toyst')
-    return quote_list[randint(0, len(quote_list) - 1)]
+    if request.args.get('name'):
+        return quote_list[randint(0, len(quote_list) - 1)]+f"Title of {request.args.get('name').title()}'s sex tape."
+    else:
+        return quote_list[randint(0, len(quote_list) - 1)]
+
+
+@app.route('/insults/<name>')
+def get_insults(name):
+    quote_list = read_txt('insults', 'holt')
+    single_q = quote_list[randint(0, len(quote_list) - 1)]
+    if name:
+        return single_q.replace('$$', name.title())
+    else:
+        return 'The endpoint requires a name. Try with /insults/boyle .'
 
 
 if __name__ == '__main__':
