@@ -2,6 +2,8 @@ import glob
 import os
 from random import randint
 from flask import Flask, render_template, request
+import json
+
 
 app = Flask(__name__, template_folder='./templates')
 files = glob.glob("src/1/*.txt")
@@ -69,6 +71,17 @@ def get_insults(name):
         return single_q.replace('$$', name.title())
     else:
         return 'The endpoint requires a name. Try with /insults/boyle .'
+
+
+@app.route('/alias')
+def get_alias():
+    with open('src/alias/alias.json') as f:
+        data = json.load(f)
+    f.close()
+    if request.args.get('season'):
+        return json.dumps(data[request.args.get('season')])
+    else:
+        return json.loads(json.dumps(data))
 
 
 if __name__ == '__main__':
